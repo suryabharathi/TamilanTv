@@ -13,8 +13,8 @@ import android.widget.VideoView;
 public class MainActivity extends AppCompatActivity {
     MediaController mediaC;
     VideoView videov;
-
-    String videopath;
+tvlink ob=new tvlink();
+    String videopath1=ob.videopath;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,8 +22,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         videov=(VideoView)findViewById(R.id.videoView);
         mediaC=new MediaController(this);
-        videopath="https://firebasestorage.googleapis.com/v0/b/flairs-6fa83.appspot.com/o/Video%2FCSE%2Fyear3%2FCompiler%20Design%2FCD%20Lecture%201.mp4?alt=media&token=62d4322b-3bde-4e48-b3c1-f20a8e64109b";
-        Uri uri= Uri.parse(videopath);
+
+        Uri uri= Uri.parse(videopath1);
         videov.setVideoURI(uri);
         videov.setMediaController(mediaC);
         mediaC.setAnchorView(videov);
